@@ -38,7 +38,7 @@ class Conversao extends Dinheiro {
 
     public function ConverteDolarReal() {
         $valor = $this->getDolar() * $this->getDolarhoje();
-        echo "U$$ {$this->getDolar()} hoje equivale a R$ $real.";
+        echo "U$$ {$this->getDolar()} hoje equivale a R$ $valor.";
     }
 }
 
