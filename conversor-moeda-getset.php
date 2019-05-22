@@ -1,7 +1,7 @@
 <?php
-class Dinheiro {
-    private $dolar;
-    private $dolarhoje;
+class Dinheiro { // class dinheiro armazana os dólares. Eu poderia ter usado class Dolar para simplificar, mas não queria que o código ficasse muito confuso.
+    private $dolar; // variável dolar -> valor que vai ser convertido em reais
+    private $dolarhoje; // variável dolarhoje -> cotação do dólar utilizada
 
     public function setDolar($dolar) {
         $this->dolar = $dolar;
@@ -21,7 +21,7 @@ class Dinheiro {
 }
 
 class Conversao extends Dinheiro {
-    private $real;
+    private $real; // variável real -> o resultado do valor em reais do valor em dólares especificado
 
     public function setReal($real) {
         $this->real = $real;
@@ -42,9 +42,9 @@ class Conversao extends Dinheiro {
 }
 
 $valor = new Conversao;
-$valor->setDolar(3.50);
+$valor->setDolar(10.50);
 $valor->setDolarhoje(4.00);
 
-echo $valor->getDetalhes();
-echo $valor->ConverteDolarReal();
+echo $valor->getDetalhes(); // imprime os detalhes iniciais, o dólar passado.
+echo $valor->ConverteDolarReal(); // imprime o resultado da conversão.
 ?>
