@@ -19,8 +19,6 @@ class Dinheiro { // class dinheiro armazana os dólares. Eu poderia ter usado cl
         return $this->dolarhoje;
     }
 }
-
-
 class Conversao extends Dinheiro {
     private $real; // variável real -> o resultado do valor em reais do valor em dólares especificado
 
@@ -33,12 +31,12 @@ class Conversao extends Dinheiro {
     }
 
     public function getDetalhes() {
-        echo "O dólar hoje está U$$ {$this->getDolarhoje()}.<br> O valor em dólares para ser convertido em reais declarado é U$$ {$this->getDolar()}.<br>";
+        echo "O dólar hoje está U$$ " . number_format($this->getDolarhoje(), 2, ',', '.') . ".<br> O valor em dólares declarado é U$$ " . number_format($this->getDolar(), 2, ',', '.') . ".<br>";
     }
 
     public function ConverteDolarReal() {
         $valor = $this->getDolar() * $this->getDolarhoje();
-        echo "U$$ {$this->getDolar()} hoje equivale a R$ $valor.";
+        echo "U$$ ". number_format($this->getDolar(), 2, ',', '.') ." hoje equivale a R$ " . number_format($valor, 2, ',', '.') . ".";
     }
 }
 
