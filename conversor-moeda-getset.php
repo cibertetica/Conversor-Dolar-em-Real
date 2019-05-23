@@ -1,5 +1,5 @@
 <?php
-class Dinheiro { // class dinheiro armazana os dólares. Eu poderia ter usado class Dolar para simplificar, mas não queria que o código ficasse muito confuso.
+class Dinheiro { // class dinheiro armazena os dólares. Eu poderia ter usado class Dolar para simplificar, mas não queria que o código ficasse muito confuso.
     private $dolar; // variável dolar -> valor que vai ser convertido em reais
     private $dolarhoje; // variável dolarhoje -> cotação do dólar utilizada
 
